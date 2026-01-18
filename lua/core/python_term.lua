@@ -120,8 +120,8 @@ function M.deactivate_current()
 
   -- Если терминал активирован, отправляем deactivate
   if activated[id] then
-      term:send("deactivate", true)
-    end
+    term:send("deactivate", true)
+  end
 
   -- Удаляем локальные данные
   activated[id] = nil

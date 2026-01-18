@@ -1,5 +1,5 @@
 local function esc(str)
-	return vim.fn.escape(str, [[;,."|\]])
+  return vim.fn.escape(str, [[;,."|\]])
 end
 
 local en = [[`qwertyuiop[]asdfghjkl;'zxcvbnm]]
@@ -8,8 +8,8 @@ local en_shift = [[~QWERTYUIOP{}ASDFGHJKL:"ZXCVBNM<>]]
 local ru_shift = [[ËЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ]]
 
 vim.opt.langmap = table.concat({
-	esc(ru_shift) .. ";" .. esc(en_shift),
-	esc(ru) .. ";" .. esc(en),
+  esc(ru_shift) .. ";" .. esc(en_shift),
+  esc(ru) .. ";" .. esc(en),
 }, ",")
 
 -- Строки
@@ -51,10 +51,10 @@ vim.o.softtabstop = 4
 
 -- Автоматически ставить вертикальную линию на 79 символов только для Python
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = "python",
-	callback = function()
-		vim.opt.colorcolumn = "79"
-	end,
+  pattern = "python",
+  callback = function()
+    vim.opt.colorcolumn = "79"
+  end,
 })
 
 -- Возможность ставить курсор на последний символ и за него

@@ -1,0 +1,41 @@
+--------------------------------
+Find
+Telescope
+
+<leader>sw - word grep
+<leader>sf - file grep
+--------------------------------
+Documentation
+
+K - hower docs
+--------------------------------
+Errors | Warnings
+
+<leader>dd - show E W from current line
+<leader>da - show all E W from file
+<leader>dq - open [D]iagnostics [Q]uickbuffer
+<leader>dj - next W E
+<leader>dk - prev W E
+--------------------------------
+LSP
+
+<leader>rn - rename on full project
+<leader>dr - restart LSP
+--------------------------------
+Text editing
+Normal mode:
+
+<leader>j - replace word under cursor
+--------------------------------
+Terminal
+
+<leader>pp - run main Python file
+<leader>pf - run current file
+<leader>pa - activate python venv
+<leader>pd - deactivate
+<leader>pt - run pytest
+<leader>nt - new side terminal (count 98)
+--------------------------------
+--------------------------------
+--------------------------------
+--------------------------------

@@ -75,10 +75,9 @@ return {
     })
 
     -- Keymaps
-    local opts = { noremap = true, silent = true, desc = "Go to Buffer" }
-    vim.keymap.set("n", "<Tab>", "<Cmd>BufferLineCycleNext<CR>", {})
-    vim.keymap.set("n", "`", "<Cmd>BufferLineCyclePrev<CR>", {})
-    vim.keymap.set("n", "ё", "<Cmd>BufferLineCyclePrev<CR>", {})
+    vim.keymap.set("n", "<Tab>", "<Cmd>BufferLineCycleNext<CR>", { desc = "Cycle buffer to next" })
+    vim.keymap.set("n", "`", "<Cmd>BufferLineCyclePrev<CR>", { desc = "Cycle buffer to previous" })
+    vim.keymap.set("n", "ё", "<Cmd>BufferLineCyclePrev<CR>", { desc = "Cycle buffer to previous" })
     vim.keymap.set("n", "<leader>q", "<Cmd>Bdelete!<CR>", { noremap = true, silent = true, desc = "Close buffer" })
     -- vim.keymap.set('n', '<leader>1', "<cmd>lua require('bufferline').go_to_buffer(1)<CR>", opts)
     -- vim.keymap.set('n', '<leader>2', "<cmd>lua require('bufferline').go_to_buffer(2)<CR>", opts)

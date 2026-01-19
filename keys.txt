@@ -36,6 +36,17 @@ Terminal
 <leader>pt - run pytest
 <leader>nt - new side terminal (count 98)
 --------------------------------
+Neogit
+
+<leader>gg - open / focus Neogit
 --------------------------------
+Folding
+
+za - toggle folding
+zc - fold
+zo - open folding
+zM - fold all blocks
+zr - unfold all blocks
+zR - ufold all block recursevly
 --------------------------------
 --------------------------------

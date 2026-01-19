@@ -2,6 +2,11 @@ local function esc(str)
   return vim.fn.escape(str, [[;,."|\]])
 end
 
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldlevel = 99
+vim.opt.foldenable = true
+
 local en = [[`qwertyuiop[]asdfghjkl;'zxcvbnm]]
 local ru = [[ёйцукенгшщзхъфывапролджэячсмить]]
 local en_shift = [[~QWERTYUIOP{}ASDFGHJKL:"ZXCVBNM<>]]

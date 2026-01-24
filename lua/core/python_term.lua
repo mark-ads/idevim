@@ -44,7 +44,7 @@ function M.find_activate()
   while dir and dir ~= "" and dir ~= prev do
     for _, name in ipairs(venv_names) do
       if vim.fn.has("win32") == 1 then
-        local p = dir .. "\\" .. name .. "\\Scripts\\activate.bat"
+        local p = dir .. "\\" .. name .. "\\Scripts\\activate"
         if exists(p) then
           return 'call "' .. p .. '"'
         end

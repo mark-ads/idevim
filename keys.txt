@@ -16,6 +16,8 @@ Errors | Warnings
 <leader>dq - open [D]iagnostics [Q]uickbuffer
 <leader>dj - next W E
 <leader>dk - prev W E
+<leader>dc - copy diagnostics from line
+<leader>dC - copy diagnostics from buffer
 --------------------------------
 LSP
 

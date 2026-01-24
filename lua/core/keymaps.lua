@@ -78,7 +78,6 @@ vim.keymap.set("n", "<leader>dc", function()
   print("Diagnostics copied to clipboard")
 end, { desc = "Copy line diagnostics" })
 
-
 vim.keymap.set("n", "<leader>dC", function()
   local diags = vim.diagnostic.get(0)
   if #diags == 0 then

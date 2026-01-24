@@ -63,6 +63,37 @@ vim.keymap.set("n", "<leader>dj", function()
   vim.diagnostic.jump({ count = 1 })
 end, { desc = "Next diagnostic" })
 
+vim.keymap.set("n", "<leader>dc", function()
+  local diags = vim.diagnostic.get(0, { lnum = vim.api.nvim_win_get_cursor(0)[1] - 1 })
+  if #diags == 0 then
+    print("No diagnostics on this line")
+    return
+  end
+  local lines = {}
+  for _, d in ipairs(diags) do
+    table.insert(lines, string.format("[%s] %s", d.source or "LSP", d.message))
+  end
+  local text = table.concat(lines, "\n")
+  vim.fn.setreg("+", text) -- копирует в системный буфер
+  print("Diagnostics copied to clipboard")
+end, { desc = "Copy line diagnostics" })
+
+
+vim.keymap.set("n", "<leader>dC", function()
+  local diags = vim.diagnostic.get(0)
+  if #diags == 0 then
+    print("No diagnostics in buffer")
+    return
+  end
+  local lines = {}
+  for _, d in ipairs(diags) do
+    local lnum = d.lnum + 1
+    table.insert(lines, string.format("[%s] %d:%d: %s", d.source or "LSP", lnum, d.col + 1, d.message))
+  end
+  local text = table.concat(lines, "\n")
+  vim.fn.setreg("+", text)
+  print("All buffer diagnostics copied to clipboard")
+end, { desc = "Copy buffer diagnostics" })
 -- Allow moving the cursor through wrapped lines with j, k
 vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })

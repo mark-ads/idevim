@@ -54,11 +54,11 @@ vim.o.shiftwidth = 4
 vim.o.tabstop = 4
 vim.o.softtabstop = 4
 
--- Автоматически ставить вертикальную линию на 79 символов только для Python
+-- Enable vertical line at 88 columns (according to Black)
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "python",
   callback = function()
-    vim.opt.colorcolumn = "79"
+    vim.opt.colorcolumn = "88"
   end,
 })
 

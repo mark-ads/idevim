@@ -18,6 +18,7 @@ Errors | Warnings
 <leader>dk - prev W E
 <leader>dc - copy diagnostics from line
 <leader>dC - copy diagnostics from buffer
+<leader>ca - open [C]ode [Actions]
 --------------------------------
 LSP
 
@@ -51,4 +52,23 @@ zM - fold all blocks
 zr - unfold all blocks
 zR - ufold all block recursevly
 --------------------------------
+Navigation
+
+* - find word under cursor
+$ - go to end of line
+0 - go to start of line
 --------------------------------
+Database
+
+<F12>d - open DB
+--------------------------------
+Text editing
+vmap gu - lowercase
+vmap U - UPPERCASE
+guw - lowercase next word
+gub - lowercase back
+gUw - lowercase next word
+gUb - UPPERCASE back
+--------------------------------
+--------------------------------
+
